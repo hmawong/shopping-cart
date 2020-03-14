@@ -24,12 +24,15 @@ $(document).ready(function(){
     $('tbody').append('<tr>' +
       '<td class="name">' + name + '</td>' +
       '<td class="cost"><input type="number" value="' + cost + '" /></td>' +
-      '<td class="qty"><span>QTY</span><input type="number" value="' + qty + '"/></td>' +
-      '<td><button class="btn btn-light btn-sm remove">remove</button></td>' +
+      '<td class="qty"><input type="number" value="' + qty + '"/></td>' +
       '<td class="price"></td>' +
+      '<td><button class="btn btn-danger btn-sm remove">Remove Product</button></td>' +
     '</tr>');
 
     updatePrice();
+    $(this).children('[name=name]').val('');
+    $(this).children('[name=cost]').val('');
+    $(this).children('[name=qty]').val('');
   });
 });
 
